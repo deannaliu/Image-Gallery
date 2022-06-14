@@ -14,7 +14,7 @@ input.addEventListener("input", (e)=>{
 
 async function CuratedPhotos(pagenr){
     const data = await fetch(
-        `https://api.pexels.com/v1/curated?per_page=2&page=${pagenr}`, 
+        `https://api.pexels.com/v1/curated?per_page=15&page=${pagenr}`, 
         {
             method:"GET",
             headers:{
@@ -26,7 +26,7 @@ async function CuratedPhotos(pagenr){
     const result = await data.json();
     result.photos.forEach(photo => {
         const pic = document.createElement("div");
-        pic.innerHTML=`<img src=${photo.src.large}
+        pic.innerHTML=`<img src=${photo.src.large}>
             <p>Photo: ${photo.photographer}</p>
             <a href=${photo.src.large}>Download</a>
         `;
