@@ -38,3 +38,25 @@ input{
     cursor: pointer;
     text-align: center;
 }
+
+.next {
+    position: fixed;
+    top:90%;
+    right: 0%;
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    border: 1px solid black;
+    width: 100px;
+    text-align: center; 
+}
+
+.gallery{
+    width: 90;
+    margin: 12vh 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-auto-columns: repeat(5, 200px);
+    row-gap: 10px;
+    column-gap: 10px;
+    justify-content: center;
+}
