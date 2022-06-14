@@ -48,6 +48,7 @@ input{
     border: 1px solid black;
     width: 100px;
     text-align: center; 
+    background-color: white;
 }
 
 .gallery{
@@ -81,7 +82,7 @@ p{
     color: white;
 }
 
-a{
+a{ /* the download button*/
     position: absolute;
     top:0;
     left:0;

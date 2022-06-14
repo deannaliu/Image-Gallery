@@ -35,4 +35,12 @@ async function CuratedPhotos(pagenr){
     //console.log(result);
 }
 
+next.addEventListener("click", ()=>{
+    if (!search){ 
+        // if we dont have any input, click next button, page will load auto next 15
+        // if there is any input in the search bar, search will be true and fetch photos
+        pagenr++;
+        CuratedPhotos(pagenr);
+    }
+})
 CuratedPhotos(pagenr)
