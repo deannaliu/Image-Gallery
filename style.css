@@ -52,11 +52,11 @@ input{
 }
 
 .gallery{
-    width: 90;
+    width: 100;
     margin: 12vh 50%;
     transform: translateX(-50%);
     display: grid;
-    grid-template-columns: repeat(5, 200px);
+    grid-template-columns: repeat(6, 200px);
     row-gap: 10px;
     column-gap: 10px;
     justify-content: center;
@@ -82,7 +82,7 @@ p{
     color: white;
 }
 
-a{ /* the download button*/
+#enlarge_button{ /* the enlarge/download button*/
     position: absolute;
     top:0;
     left:0;
@@ -91,3 +91,30 @@ a{ /* the download button*/
     margin-left: 10px;
     font-weight: bold;
 }
+
+.sidenav {
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    top: 10vh;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .sidenav a {
+    padding-left: 20%;
+    text-decoration: none;
+    font-size: 25px;
+    color:#818181;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenav h2{
+    color: #818181
+  }

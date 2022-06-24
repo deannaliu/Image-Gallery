@@ -24,7 +24,7 @@ input.addEventListener("keypress", function(event) {
 
 async function CuratedPhotos(pagenr){
     const data = await fetch(
-        `https://api.pexels.com/v1/curated?per_page=15&page=${pagenr}`, 
+        `https://api.pexels.com/v1/curated?per_page=18&page=${pagenr}`, 
         {
             method:"GET",
             headers:{
@@ -38,7 +38,7 @@ async function CuratedPhotos(pagenr){
         const pic = document.createElement("div");
         pic.innerHTML=`<img src=${photo.src.large}>
             <p>Photo: ${photo.photographer}</p>
-            <a href=${photo.src.large}>Download</a>
+            <a id = "enlarge_button" href=${photo.src.large}>Enlarge</a>
         `;
         document.querySelector(".gallery").appendChild(pic);
     });
@@ -47,7 +47,7 @@ async function CuratedPhotos(pagenr){
 
 async function SearchPhotos(query, pagenr){
     const data = await fetch(
-        `https://api.pexels.com/v1/search?query=${query}&per_page=15&page=${pagenr}`, 
+        `https://api.pexels.com/v1/search?query=${query}&per_page=18&page=${pagenr}`, 
         {
             method:"GET",
             headers:{
